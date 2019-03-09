@@ -17,6 +17,11 @@ public class Admin implements Serializable{
 	private String email;
 	private String MotDePasse;
 	
+	public Admin() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Admin(Long id, String nom, String prenom, String email, String motDePasse) {
 		super();
 		this.id = id;

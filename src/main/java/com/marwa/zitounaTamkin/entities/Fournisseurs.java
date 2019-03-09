@@ -2,19 +2,26 @@ package com.marwa.zitounaTamkin.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Fournisseurs {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 private Long id;
 private String nom;
 private String prenom;
 private String email;
 private String motDePasse;
 private String adresse;
+
+
+public Fournisseurs() {
+	super();
+	// TODO Auto-generated constructor stub
+}
 public Fournisseurs(Long id, String nom, String prenom, String email, String motDePasse, String adresse) {
 	super();
 	this.id = id;

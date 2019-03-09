@@ -2,17 +2,23 @@ package com.marwa.zitounaTamkin.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class AgentAffaire {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 private Long id;
 private String nom;
 private String prenom;
 private String email;
 private String MotDePasse;
+
+public AgentAffaire() {
+	super();
+	// TODO Auto-generated constructor stub
+}
 
 public AgentAffaire(Long id, String nom, String prenom, String email, String motDePasse) {
 	super();
